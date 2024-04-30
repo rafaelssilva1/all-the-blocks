@@ -1,0 +1,15 @@
+/**
+* The following styles get applied inside the editor only.
+*/
+
+@import "../../editor.scss";
+
+.contacts {
+
+	&__link {
+
+		&:hover {
+			color: inherit;
+		}
+	}
+}

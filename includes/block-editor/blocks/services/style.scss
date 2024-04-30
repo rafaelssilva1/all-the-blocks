@@ -1,0 +1,124 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+@import "../../../components/Button/button.scss";
+
+.services-slideshow {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-32);
+
+	background-color: var(--wp--preset--color--off-white);
+
+	padding: clamp(var(--spacing-24), 1.5vw + 1.92rem, var(--spacing-48));
+
+	&__overflow {
+		overflow: hidden;
+	}
+
+	&__container {
+		display: flex;
+
+		white-space: nowrap;
+
+		padding: var(--spacing-8);
+
+		width: 100%;
+
+		transition: transform 0.3s ease-out;
+
+		&--item {
+			display: flex;
+			gap: var(--spacing-16);
+
+			margin: var(--spacing-16);
+			min-width: 100%;
+		}
+	}
+
+	&__image {
+		flex-basis: 40%;
+
+		position: relative;
+
+		img {
+			position: relative;
+			object-fit: cover;
+			z-index: 2;
+
+			aspect-ratio: 1/1;
+		}
+
+		&--overlay {
+			background-color: var(--wp--preset--color--secondary);
+			position: absolute;
+
+			top: calc(-1 * var(--spacing-8));
+			left: calc(-1 * var(--spacing-8));
+
+			width: 100%;
+			height: 100%;
+
+			z-index: 1;
+		}
+	}
+
+	&__content {
+		flex-basis: 60%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		&--tag {
+			color: var(--wp--preset--color--white);
+			background-color: var(--wp--preset--color--terciary);
+
+			padding: var(--spacing-4) var(--spacing-8);
+
+			width: fit-content;
+		}
+
+		&--title {
+			font-size: clamp(4rem, 2.5vw + 3.2rem, 8rem);
+			color: var(--wp--preset--color--primary);
+		}
+
+		&--description {
+			font-size: clamp(1.6rem, 0.063vw + 1.58rem, 1.7rem);
+
+			color: var(--wp--preset--color--black);
+
+			margin-bottom: var(--spacing-16);
+
+			white-space: break-spaces;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: center;
+
+		gap: var(--spacing-8);
+
+		svg {
+			cursor: pointer;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.services-slideshow {
+
+		&__container {
+			padding: var(--spacing-8) var(--spacing-20);
+
+			&--item {
+				flex-direction: column;
+			}
+		}
+	}
+}

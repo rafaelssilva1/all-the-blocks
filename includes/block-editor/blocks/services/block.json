@@ -1,0 +1,44 @@
+{
+	"apiVersion": 2,
+	"name": "custom/services",
+	"version": "0.1.0",
+	"title": "Services",
+	"category": "custom",
+	"icon": "archive",
+	"description": "Services",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"data": {
+			"type": "array",
+			"media": {},
+			"tag": "",
+			"title": "",
+			"description": "",
+			"cta": "",
+			"link": {},
+			"default": []
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/services.js",
+	"viewScript": "file:../../../../build/services-script.js",
+	"editorStyle": "file:../../../../build/services.css",
+	"style": "file:../../../../build/style-services.css"
+}

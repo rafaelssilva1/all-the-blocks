@@ -1,0 +1,38 @@
+{
+	"apiVersion": 2,
+	"name": "custom/testimonials",
+	"version": "0.1.0",
+	"title": "Testimonials",
+	"category": "custom",
+	"icon": "testimonial",
+	"description": "Testimonials",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"data": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/testimonials.js",
+	"viewScript": "file:../../../../build/testimonials-script.js",
+	"editorStyle": "file:../../../../build/testimonials.css",
+	"style": "file:../../../../build/style-testimonials.css"
+}

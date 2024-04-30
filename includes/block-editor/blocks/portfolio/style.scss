@@ -1,0 +1,135 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+@import "../../../components/Portfolio/Modal/modal.scss";
+
+.portfolio {
+	padding: var(--spacing-36) clamp(var(--spacing-16), 1.25vw + 1.2rem, var(--spacing-36));
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		margin-bottom: var(--spacing-16);
+
+		&--title {
+			font-size: clamp(2.2rem, 1.125vw + 1.84rem, 4rem);
+		}
+
+		&--link {
+			font-size: clamp(1.3rem, 0.188vw + 1.24rem, 1.6rem);
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		object-fit: cover;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		background-color: rgba(0, 0, 0, 0.5);
+
+		z-index: 1;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--spacing-16);
+
+		overflow-x: scroll;
+		white-space: nowrap;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+
+		&--item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			position: relative;
+			overflow: hidden;
+
+			padding: var(--spacing-48) var(--spacing-8) var(--spacing-32) var(--spacing-16);
+
+			height: 40rem;
+			min-width: 25rem;
+
+			cursor: pointer;
+
+			&-wrapper {
+				display: flex;
+				flex-direction: column;
+
+				position: relative;
+				z-index: 2;
+
+				color: var(--wp--preset--color--white);
+
+				white-space: initial;
+			}
+
+			&-date {
+				font-size: 1.5rem;
+			}
+
+			&-title {
+				font-family: "Title Bold", sans-serif;
+				font-size: 2.1rem;
+			}
+
+			&-cta {
+				display: flex;
+				justify-content: flex-end;
+				gap: var(--spacing-4);
+
+				position: relative;
+				z-index: 3;
+
+				font-size: 1.7rem;
+
+				color: var(--wp--preset--color--white);
+
+				svg {
+					fill: var(--wp--preset--color--white);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+
+	.portfolio {
+
+		&__items {
+			overflow: auto;
+			white-space: nowrap;
+
+			&__item {
+				display: inline-block;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+/**
+* The following styles get applied inside the editor only.
+*/
+
+@import "../../editor.scss";
+
+.icons-list {
+
+	&__items {
+
+		&--item {
+
+			&-icon {
+				height: 7.4rem !important;
+				width: auto !important;
+			}
+		}
+	}
+}

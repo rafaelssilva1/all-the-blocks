@@ -1,0 +1,36 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+.filters {
+	display: flex;
+	gap: var(--spacing-16);
+
+	margin-block: var(--spacing-12);
+
+	overflow-x: scroll;
+	white-space: nowrap;
+
+	&__link {
+		border: 0.1rem solid var(--wp--preset--color--gray);
+		border-radius: 4rem;
+
+		padding: var(--spacing-8) var(--spacing-20);
+
+		font-size: 1.6rem;
+
+		&.active {
+			background-color: var(--wp--preset--color--primary);
+			border-color: var(--wp--preset--color--primary);
+			color: var(--wp--preset--color--white);
+		}
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}

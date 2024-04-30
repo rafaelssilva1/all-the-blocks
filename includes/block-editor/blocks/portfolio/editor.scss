@@ -1,0 +1,30 @@
+/**
+* The following styles get applied inside the editor only.
+*/
+
+@import "../../editor.scss";
+
+.portfolio {
+
+	&__header {
+
+		&--link {
+			text-decoration: underline !important;
+			font-family: "Main Regular", sans-serif;
+		}
+	}
+
+	&__items {
+
+		&--item {
+
+			&-date {
+				font-family: "Main Regular", sans-serif;
+			}
+
+			&-cta {
+				font-family: "Main Regular", sans-serif;
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"apiVersion": 2,
+	"name": "custom/filters",
+	"version": "0.1.0",
+	"title": "Filters",
+	"category": "custom",
+	"icon": "filter",
+	"description": "Filters",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"data": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/filters.js",
+	"editorStyle": "file:../../../../build/filters.css",
+	"style": "file:../../../../build/style-filters.css"
+}

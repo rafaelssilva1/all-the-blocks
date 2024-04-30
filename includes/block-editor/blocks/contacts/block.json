@@ -1,0 +1,65 @@
+{
+	"apiVersion": 2,
+	"name": "custom/contacts",
+	"version": "0.1.0",
+	"title": "Contacts",
+	"category": "custom",
+	"icon": "admin-site-alt",
+	"description": "Contacts",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"address": {
+			"type": "object",
+			"default": {}
+		},
+		"schedule": {
+			"type": "string",
+			"default": ""
+		},
+		"email": {
+			"type": "string",
+			"default": ""
+		},
+		"phone": {
+			"type": "string",
+			"default": ""
+		},
+		"whatsapp": {
+			"type": "string",
+			"default": ""
+		},
+		"facebook": {
+			"type": "string",
+			"default": ""
+		},
+		"instagram": {
+			"type": "string",
+			"default": ""
+		},
+		"linkedin": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/contacts.js",
+	"editorStyle": "file:../../../../build/contacts.css",
+	"style": "file:../../../../build/style-contacts.css"
+}

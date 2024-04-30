@@ -1,0 +1,44 @@
+{
+	"apiVersion": 2,
+	"name": "custom/products",
+	"version": "0.1.0",
+	"title": "Products",
+	"category": "custom",
+	"icon": "products",
+	"description": "Products",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"data": {
+			"type": "array",
+			"name": "",
+			"media": "",
+			"link": "",
+			"default": []
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/products.js",
+	"editorStyle": "file:../../../../build/products.css",
+	"style": "file:../../../../build/style-products.css"
+}

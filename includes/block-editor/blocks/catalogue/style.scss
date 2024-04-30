@@ -1,0 +1,62 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+.catalogue {
+
+	&__title {
+		font-size: clamp(4rem, 1.25vw + 3.6rem, 6rem);
+		color: var(--wp--preset--color--primary);
+	}
+
+	&__description {
+		font-size: 1.6rem;
+		font-family: "Main Regular", sans-serif;
+		font-weight: 400;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--spacing-32);
+
+		margin-block: var(--spacing-32);
+
+		&--item {
+			display: flex;
+			flex-direction: column;
+
+			gap: var(--spacing-8);
+
+			font-size: 1.8rem;
+
+			&-image {
+				max-height: 40rem;
+				aspect-ratio: 9/16;
+				object-fit: cover;
+			}
+
+			&-name {
+				font-family: "Main Bold", sans-serif;
+				font-weight: 700;
+			}
+
+			&-download {
+				display: flex;
+				gap: var(--spacing-4);
+				color: var(--wp--preset--color--secondary);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.catalogue {
+
+		&__items {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

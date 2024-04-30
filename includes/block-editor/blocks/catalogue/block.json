@@ -1,0 +1,48 @@
+{
+	"apiVersion": 2,
+	"name": "custom/catalogue",
+	"version": "0.1.0",
+	"title": "Catalogue",
+	"category": "custom",
+	"icon": "download",
+	"description": "Catalogue",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"data": {
+			"type": "array",
+			"media": {},
+			"file": {},
+			"name": "",
+			"default": []
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"description": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/catalogue.js",
+	"editorStyle": "file:../../../../build/catalogue.css",
+	"style": "file:../../../../build/style-catalogue.css"
+}

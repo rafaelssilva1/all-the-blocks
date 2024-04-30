@@ -1,0 +1,46 @@
+{
+	"apiVersion": 2,
+	"name": "custom/portfolio",
+	"version": "0.1.0",
+	"title": "Portfolio",
+	"category": "custom",
+	"icon": "portfolio",
+	"description": "Portfolio",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Trabalhos recentes"
+		},
+		"link": {
+			"type": "object",
+			"default": {}
+		},
+		"worksList": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/portfolio.js",
+	"viewScript": "file:../../../../build/portfolio-script.js",
+	"editorStyle": "file:../../../../build/portfolio.css",
+	"style": "file:../../../../build/style-portfolio.css"
+}

@@ -1,0 +1,46 @@
+{
+	"apiVersion": 2,
+	"name": "custom/description-alt",
+	"version": "0.1.0",
+	"title": "Description Alt",
+	"category": "custom",
+	"icon": "admin-page",
+	"description": "Description Alt",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"description": {
+			"type": "string",
+			"default": ""
+		},
+		"media": {
+			"type": "obj",
+			"default": {}
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/description-alt.js",
+	"viewScript": "file:../../../../build/description-alt-script.js",
+	"editorStyle": "file:../../../../build/description-alt.css",
+	"style": "file:../../../../build/style-description-alt.css"
+}

@@ -1,0 +1,54 @@
+{
+	"apiVersion": 2,
+	"name": "custom/description",
+	"version": "0.1.0",
+	"title": "Description",
+	"category": "custom",
+	"icon": "text-page",
+	"description": "Description",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"data": {
+			"type": "array",
+			"default": []
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"description": {
+			"type": "string",
+			"default": ""
+		},
+		"media": {
+			"type": "obj",
+			"default": {}
+		},
+		"open": {
+			"type": "number",
+			"default": 1
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/description.js",
+	"viewScript": "file:../../../../build/description-script.js",
+	"editorStyle": "file:../../../../build/description.css",
+	"style": "file:../../../../build/style-description.css"
+}

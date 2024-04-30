@@ -1,0 +1,117 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+.hero {
+	position: relative;
+	height: 100vh;
+
+	&__overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		background-color: rgba(0, 0, 0, 0.5);
+
+		z-index: 1;
+	}
+
+	&__media {
+
+		img,
+		video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		z-index: 3;
+
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: column;
+
+		padding: clamp(var(--spacing-16), 6.75vw - 0.56rem, var(--spacing-124));
+
+		&--wrapper {
+			position: relative;
+		}
+	}
+
+	&__title {
+		padding-left: clamp(var(--spacing-20), 2.75vw + 1.12rem, var(--spacing-64));
+		margin-bottom: var(--spacing-16);
+
+		font-family: "Main Bold", sans-serif;
+		font-size: clamp(4rem, 3.125vw + 3rem, 9rem);
+
+		color: var(--wp--preset--color--white);
+
+		&.center {
+			text-align: center;
+		}
+	}
+
+	&__subtitle {
+		margin-left: clamp(var(--spacing-20), 2.75vw + 1.12rem, var(--spacing-64));
+
+		color: var(--wp--preset--color--white);
+		background-color: var(--wp--preset--color--terciary);
+
+		font-family: "Main Regular", sans-serif;
+		font-size: clamp(1.4rem, 0.375vw + 1.28rem, 2rem);
+
+		padding: var(--spacing-8);
+
+		width: fit-content;
+	}
+
+	&__discount {
+		position: absolute;
+		top: -75%;
+		left: -3%;
+
+		z-index: -1;
+
+		background-color: var(--wp--preset--color--secondary);
+		color: var(--wp--preset--color--white);
+		padding: clamp(2rem, 1.25vw + 1.6rem, 4rem);
+
+		border-radius: 50%;
+
+		font-family: "Main Bold", sans-serif;
+		text-align: center;
+
+		&--value {
+			font-size: clamp(3.2rem, 1.625vw + 2.68rem, 5.8rem);
+		}
+
+		&--label {
+			font-family: "Main Regular", sans-serif;
+			font-size: clamp(1.8rem, 0.5vw + 1.64rem, 2.6rem);
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.hero {
+
+		&__discount {
+			top: -40%;
+			left: 60%;
+		}
+	}
+}

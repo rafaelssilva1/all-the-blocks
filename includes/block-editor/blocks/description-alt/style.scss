@@ -1,0 +1,97 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+.description-alt {
+	display: flex;
+
+	background-color: var(--wp--preset--color--off-white);
+
+	&__column {
+		flex-basis: 50%;
+
+		&.content {
+			padding-block: var(--spacing-48);
+			padding-inline: clamp(var(--spacing-16), 1vw + 1.28rem, var(--spacing-32));
+		}
+	}
+
+	&__title {
+		color: var(--wp--preset--color--primary);
+
+		font-family: "Main Bold", sans-serif;
+		font-size: 2.2rem;
+		font-weight: 700;
+	}
+
+	&__description {
+		font-size: 1.6rem;
+		margin-block: var(--spacing-16);
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__accordion {
+		display: flex;
+		flex-direction: column;
+
+		&--item {
+
+			&-question {
+				display: flex;
+				justify-content: space-between;
+
+				font-family: "Main Bold", sans-serif;
+				font-size: 2.2rem;
+
+				padding-bottom: var(--spacing-8);
+
+				border-bottom: 0.1rem solid #717171;
+
+				cursor: pointer;
+			}
+
+			&-answer {
+				font-size: 1.6rem;
+
+				height: 0;
+				overflow: hidden;
+
+				margin-top: var(--spacing-16);
+
+				transition: all 0.3s ease-out;
+
+				&.show {
+					height: auto;
+					margin-bottom: var(--spacing-16);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.description-alt {
+		flex-direction: column;
+
+		&__column {
+			flex-basis: 100%;
+		}
+
+		&__accordion {
+
+			&--item {
+
+				&-question {
+					align-items: flex-start;
+				}
+			}
+		}
+	}
+}

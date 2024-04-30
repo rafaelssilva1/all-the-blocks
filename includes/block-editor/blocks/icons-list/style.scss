@@ -1,0 +1,48 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+.icons-list {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+
+	padding: clamp(6.4rem, 3.75vw + 5.2rem, 12.4rem) clamp(var(--spacing-16), 2vw + 0.96rem, var(--spacing-48));
+
+	&__title {
+		font-size: clamp(var(--spacing-20), 1.25vw + 1.6rem, var(--spacing-40));
+		text-align: center;
+
+		margin-block: clamp(var(--spacing-32), 2vw + 2.56rem, var(--spacing-64));
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+		gap: var(--spacing-16);
+
+		&--item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			gap: var(--spacing-16);
+
+			font-size: 1.6rem;
+
+			&-icon {
+				height: 7.4rem;
+				width: auto;
+			}
+
+			&-title {
+				font-family: "Main Bold", sans-serif;
+			}
+
+			&-description {
+				font-family: "Main Regular", sans-serif;
+			}
+		}
+	}
+}

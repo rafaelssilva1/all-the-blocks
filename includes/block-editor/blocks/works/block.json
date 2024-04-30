@@ -1,0 +1,42 @@
+{
+	"apiVersion": 2,
+	"name": "custom/works",
+	"version": "0.1.0",
+	"title": "Works",
+	"category": "custom",
+	"icon": "grid-view",
+	"description": "Works",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"data": {
+			"type": "array",
+			"default": []
+		},
+		"hideBtn": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/works.js",
+	"viewScript": "file:../../../../build/works-script.js",
+	"editorStyle": "file:../../../../build/works.css",
+	"style": "file:../../../../build/style-works.css"
+}

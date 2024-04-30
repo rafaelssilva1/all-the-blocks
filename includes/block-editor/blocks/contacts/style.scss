@@ -1,0 +1,52 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+.contacts-block {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-16);
+
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+
+	padding: clamp(var(--spacing-16), 1vw + 1.28rem, var(--spacing-32));
+	margin-block: var(--spacing-16);
+
+	font-size: 1.8rem;
+	font-family: "Main Regular", sans-serif;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-8);
+
+		&.flex-end {
+			justify-content: flex-end;
+			gap: var(--spacing-16);
+		}
+
+		&.column {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-left: var(--spacing-28);
+		}
+
+		.small {
+			font-size: 1.1rem;
+		}
+
+		&.white-space {
+			white-space: pre-line;
+		}
+	}
+
+	&__link {
+		color: var(--wp--preset--color--white);
+	}
+
+	svg {
+		min-width: 2rem;
+	}
+}

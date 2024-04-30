@@ -1,0 +1,139 @@
+.modal,
+.contact-modal {
+	display: none;
+
+	&.show {
+		display: block;
+	}
+
+	z-index: 5000;
+	position: relative;
+
+	&__wrapper {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		width: 80%;
+		height: fit-content;
+
+		padding: var(--spacing-32) var(--spacing-80);
+
+		background-color: var(--wp--preset--color--alt);
+		color: var(--wp--preset--color--white);
+	}
+
+	&__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+
+		background-color: rgba($color: var(--wp--preset--color--black), $alpha: 0.5);
+	}
+
+	&__title {
+		font-family: "Title Bold", serif;
+		font-size: clamp(2.1rem, 0.438vw + 1.96rem, 2.8rem);
+
+		margin-bottom: var(--spacing-16);
+
+		white-space: normal;
+	}
+
+	&__slideshow {
+		overflow: hidden;
+		margin-bottom: var(--spacing-16);
+
+		&--controls {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			display: flex;
+			justify-content: space-between;
+
+			padding-inline: var(--spacing-16);
+
+			width: 100%;
+
+			svg {
+				cursor: pointer;
+			}
+
+			&.hide {
+				display: none;
+			}
+		}
+
+		&--images {
+			transition: transform 0.3s ease-out;
+			white-space: nowrap;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__description {
+		font-family: "Main Regular", sans-serif;
+		font-size: 1.6rem;
+
+		white-space: normal;
+	}
+
+	&__close {
+		position: absolute;
+		top: clamp(var(--spacing-16), 1vw + 1.28rem, var(--spacing-32));
+		right: clamp(var(--spacing-16), 1vw + 1.28rem, var(--spacing-32));
+
+		cursor: pointer;
+	}
+}
+
+.contact-modal {
+
+	a {
+		color: var(--wp--preset--color--white);
+		text-decoration: underline;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.modal {
+
+		&__wrapper {
+			top: unset;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 70%;
+			transform: unset;
+		}
+
+		&__slideshow {
+
+			&--controls {
+				position: initial;
+				transform: unset;
+				padding-inline: var(--spacing-0);
+
+				margin-top: var(--spacing-16);
+			}
+		}
+	}
+
+	.contact-modal {
+
+		.modal__wrapper {
+			height: 90%;
+		}
+	}
+}

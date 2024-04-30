@@ -1,0 +1,45 @@
+{
+	"apiVersion": 2,
+	"name": "custom/about-us",
+	"version": "0.1.0",
+	"title": "About Us",
+	"category": "custom",
+	"icon": "welcome-write-blog",
+	"description": "About Us",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"description": {
+			"type": "string",
+			"default": ""
+		},
+		"image_1": {
+			"type": "object",
+			"default": {}
+		},
+		"image_2": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/about-us.js",
+	"editorStyle": "file:../../../../build/about-us.css",
+	"style": "file:../../../../build/style-about-us.css"
+}

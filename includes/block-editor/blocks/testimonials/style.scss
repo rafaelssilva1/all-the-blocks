@@ -1,0 +1,62 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+.testimonials {
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+		gap: var(--spacing-16);
+
+		&--item {
+			background-color: var(--wp--preset--color--terciary);
+			color: var(--wp--preset--color--white);
+
+			padding: clamp(1.6rem, 1vw + 1.28rem, 3.2rem);
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			gap: var(--spacing-16);
+
+			min-height: 40rem;
+
+			&-wrapper {
+				display: flex;
+				align-items: flex-end;
+				gap: var(--spacing-8);
+			}
+
+			&-quote {
+				font-family: "Title Regular", sans-serif;
+				font-size: 6rem;
+			}
+
+			&-title {
+				font-size: 1.8rem;
+
+				margin-bottom: var(--spacing-24);
+				margin-left: var(--spacing-16);
+			}
+
+			&-description {
+				font-family: "Main Regular", sans-serif;
+				font-weight: 400;
+				font-style: italic;
+				font-size: 1.6rem;
+			}
+
+			&-name {
+				font-family: "Main Regular", sans-serif;
+				font-weight: 400;
+				font-size: 1.6rem;
+
+				text-align: right;
+			}
+		}
+	}
+}

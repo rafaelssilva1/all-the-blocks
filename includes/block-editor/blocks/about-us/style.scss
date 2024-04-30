@@ -1,0 +1,35 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+.about-us {
+
+	&__description {
+		margin-block: var(--spacing-8);
+	}
+
+	&__media {
+		border-radius: 50%;
+
+		&--1 {
+			width: clamp(22rem, 13.75vw + 17.6rem, 44rem);
+			height: clamp(22rem, 13.75vw + 17.6rem, 44rem);
+
+			object-fit: cover;
+
+			float: right;
+			margin-right: 1rem;
+		}
+
+		&--2 {
+			width: clamp(10rem, 13.125vw + 5.8rem, 31rem);
+			height: clamp(10rem, 13.125vw + 5.8rem, 31rem);
+
+			object-fit: cover;
+
+			float: right;
+			margin-right: -8rem;
+		}
+	}
+}

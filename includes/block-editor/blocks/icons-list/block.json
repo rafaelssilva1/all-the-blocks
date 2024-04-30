@@ -1,0 +1,42 @@
+{
+	"apiVersion": 2,
+	"name": "custom/icons-list",
+	"version": "0.1.0",
+	"title": "Icons List",
+	"category": "custom",
+	"icon": "list-view",
+	"description": "Icons List",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"data": {
+			"type": "array",
+			"default": []
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/icons-list.js",
+	"viewScript": "file:../../../../build/icons-list-script.js",
+	"editorStyle": "file:../../../../build/icons-list.css",
+	"style": "file:../../../../build/style-icons-list.css"
+}

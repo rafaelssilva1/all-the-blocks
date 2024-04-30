@@ -1,0 +1,53 @@
+{
+	"apiVersion": 2,
+	"name": "custom/hero",
+	"version": "0.1.0",
+	"title": "Hero",
+	"category": "custom",
+	"icon": "money",
+	"description": "Hero",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Janelas Eficientes"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": ""
+		},
+		"discount": {
+			"type": "number",
+			"default": 0
+		},
+		"media": {
+			"type": "object",
+			"default": {}
+		},
+		"link": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/hero.js",
+	"editorStyle": "file:../../../../build/hero.css",
+	"style": "file:../../../../build/style-hero.css"
+}

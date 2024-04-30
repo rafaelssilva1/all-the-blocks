@@ -1,0 +1,109 @@
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+@import "../../../components/Portfolio/Modal/modal.scss";
+
+.products {
+	display: flex;
+	gap: var(--spacing-32);
+
+	margin-block: var(--spacing-48);
+
+	&__title {
+		flex-basis: 30%;
+
+		font-size: clamp(6rem, 1.25vw + 5.6rem, 8rem);
+
+		color: var(--wp--preset--color--primary);
+
+		margin-bottom: var(--spacing-32);
+	}
+
+	&__items {
+		flex-basis: 70%;
+
+		display: flex;
+		justify-content: flex-end;
+		gap: var(--spacing-32);
+
+		overflow-x: scroll;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+
+		white-space: nowrap;
+
+		&--item {
+			position: relative;
+
+			display: block;
+
+			height: 60rem;
+			max-width: 40rem;
+			min-width: 30rem;
+
+			&-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				width: 100%;
+				height: 100%;
+
+				background-color: rgba($color: var(--wp--preset--color--black), $alpha: 0.5);
+
+				z-index: 2;
+			}
+
+			&-image {
+				width: 100%;
+				height: 100%;
+
+				object-fit: cover;
+
+				z-index: 1;
+			}
+
+			&-title {
+				position: absolute;
+				bottom: var(--spacing-16);
+				left: var(--spacing-16);
+
+				color: var(--wp--preset--color--white);
+
+				font-size: clamp(5rem, 0.625vw + 4.8rem, 6rem);
+
+				z-index: 3;
+			}
+		}
+	}
+
+	&__arrow {
+		display: none;
+
+		align-self: flex-end;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.products {
+		flex-direction: column;
+
+		&__title,
+		&__items {
+			flex-basis: 100%;
+			justify-content: flex-start;
+		}
+
+		&__arrow {
+			display: block;
+		}
+	}
+}

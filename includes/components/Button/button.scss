@@ -1,0 +1,12 @@
+.custom-button {
+	padding: var(--spacing-16) var(--spacing-24);
+
+	font-size: clamp(1.5rem, 0.063vw + 1.48rem, 1.6rem);
+
+	width: fit-content;
+
+	&-primary {
+		color: var(--wp--preset--color--white);
+		background-color: var(--wp--preset--color--secondary);
+	}
+}
