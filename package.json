@@ -7,8 +7,8 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build",
-		"watch": "wp-scripts start && wp-scripts format",
+		"build": "wp-scripts format && wp-scripts build",
+		"watch": "wp-scripts format && wp-scripts start",
 		"dev": "watch \"npm run watch\" ./includes",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
