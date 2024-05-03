@@ -59,9 +59,9 @@ const Edit = ( props ) => {
 			<div { ...blockProps }>
 				<div className="portfolio__header">
 					<h2 className="portfolio__header--title">{ title }</h2>
-					<a className="portfolio__header--link" href={ link.url }>
-						{ __( 'Ver todos', 'atb' ) }
-					</a>
+					{link && link.url ? <a className="portfolio__header--link" href={link.url}>
+						{__('Ver todos', 'atb')}
+					</a> : null}
 				</div>
 				{ hasResolved ? (
 					<RecentJobs
