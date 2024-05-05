@@ -1,0 +1,46 @@
+{
+	"apiVersion": 2,
+	"name": "custom/comparison",
+	"version": "0.1.0",
+	"title": "Comparison",
+	"category": "custom",
+	"icon": "image-flip-horizontal",
+	"description": "Comparison",
+	"supports": {
+		"anchor": true,
+		"className": true,
+		"alignWide": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"before": {
+			"type": "object",
+			"default": {}
+		},
+		"after": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"textdomain": "atb",
+	"editorScript": "file:../../../../build/comparison.js",
+	"viewScript": "file:../../../../build/comparison-script.js",
+	"editorStyle": "file:../../../../build/comparison.css",
+	"style": "file:../../../../build/style-comparison.css"
+}

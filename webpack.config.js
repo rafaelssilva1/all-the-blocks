@@ -1,4 +1,4 @@
-const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 
 module.exports = {
 	...defaultConfig,
@@ -22,5 +22,7 @@ module.exports = {
 		'description-alt': './includes/block-editor/blocks/description-alt',
 		'icons-list': './includes/block-editor/blocks/icons-list',
 		testimonials: './includes/block-editor/blocks/testimonials',
+		comparison: './includes/block-editor/blocks/comparison',
+		'comparison-script': './includes/block-editor/blocks/comparison/script.js',
 	},
 };

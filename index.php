@@ -38,6 +38,7 @@ function custom_blocks_init()
 		'description-alt/',
 		'icons-list/',
 		'testimonials/',
+		'comparison/',
 	);
 
 	foreach ($blocks as $block) {
